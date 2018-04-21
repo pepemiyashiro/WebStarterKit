@@ -1,0 +1,15 @@
+{
+  "name": "webpack-4",
+  "version": "1.0.0",
+  "description": "Build with Webpack4",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./node_modules/webpack/bin/webpack.js --mode development"
+  },
+  "author": "Pepe Miyashiro",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14"
+  }
+}
