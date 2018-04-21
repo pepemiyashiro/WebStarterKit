@@ -4,7 +4,12 @@
   "description": "Build with Webpack4",
   "main": "index.js",
   "scripts": {
-    "build": "node ./node_modules/webpack/bin/webpack.js --mode development"
+    "build:dev": "yarn watch --mode development",
+    "build:dev:debug": "yarn watch:debug --mode development",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "build": "node ./node_modules/webpack/bin/webpack.js",
+    "watch": "yarn build --watch",
+    "watch:debug": "yarn debug --watch"
   },
   "author": "Pepe Miyashiro",
   "license": "ISC",
