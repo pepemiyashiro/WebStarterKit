@@ -1,0 +1,12 @@
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: lightgrey;
+    text-transform: uppercase;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+}
+

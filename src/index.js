@@ -1,5 +1,5 @@
 
-// require('./style.css');
+import './style.css';
 
 const $main = document.querySelector('main');
 
