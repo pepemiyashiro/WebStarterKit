@@ -1,0 +1,8 @@
+@import '../../atoms/a-button/a-button.css';
+
+.p-banner {
+    background-color: lightcyan;
+    .a-button {
+        font-size: 1.5em;
+    }
+}

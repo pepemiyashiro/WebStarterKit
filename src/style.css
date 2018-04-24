@@ -1,5 +1,5 @@
 @import "sanitize.css";
-
+@import "./ui-elements/particles/p-banner/p-banner.css";
 :root {
     --color-blue: blue;
 }
@@ -13,3 +13,10 @@ body {
     max-width: 970px;
     margin:  0 auto;
 }
+
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+

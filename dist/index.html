@@ -12,7 +12,28 @@
         <h1>Webpack 4 Build</h1>
     </header>
     <main>
-
+        <h1>Hello Webpack 4 with Postcss/CSSNext</h1>
+        <div class="p-banner">
+            <figure class="p-banner__figure">
+                <img src="https://www.placehold.it/1920x1080" alt="A banner Image" class="p-banner__image">
+                <figcaption>This a description text for the banner</figcaption>
+                <button class="p-banner__button a-button" js-handler >Click Me!</button>
+            </figure>
+        </div>
+        <section>
+            <article>
+                <p class="color-blue">Using a color variable for cssnext!!!</p>
+                <p>Also Post CSS is removing the :root reference, it uses the postcss custom reference, to compile as a property in the object. <a href="https://github.com/cbracco/postcss-remove-root">postcss-remove-root</a></p>
+            </article>
+            <article>
+                <h2>TODO:</h2>
+                <ul>
+                    <li>Compose webpack configuration</li>
+                    <li>Code Split for CSS and JS</li>
+                    <li>Move PostCSS configuration to <code>postcss.config.js</code></li>
+                </ul>
+            </article>
+        </section>
     </main>
     <footer>
         <small>

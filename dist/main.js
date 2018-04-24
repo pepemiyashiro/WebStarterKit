@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\nvar $main = document.querySelector('main');\n\n$main.innerHTML = '\\n    <h1>Hello Webpack 4 with Postcss/CSSNext</h1>\\n    <section>\\n        <article>\\n            <p class=\"color-blue\">Using a color variable for cssnext!!!</p>\\n            <p>Also Post CSS is removing the :root reference, it uses the postcss custom reference, to compile as a property in the object. <a href=\"https://github.com/cbracco/postcss-remove-root\">postcss-remove-root</a></p>\\n        </article>\\n    </section>\\n';\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\n__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n__webpack_require__(/*! ./ui-elements/particles/p-banner/p-banner */ \"./src/ui-elements/particles/p-banner/p-banner.js\");\n\nvar $main = document.querySelector('main');\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -91,6 +91,30 @@ eval("\n\n__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\nvar $m
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/style.css?");
+
+/***/ }),
+
+/***/ "./src/ui-elements/atoms/a-button/a-button.js":
+/*!****************************************************!*\
+  !*** ./src/ui-elements/atoms/a-button/a-button.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nconsole.log(\"Button have been loaded\");\n\n//# sourceURL=webpack:///./src/ui-elements/atoms/a-button/a-button.js?");
+
+/***/ }),
+
+/***/ "./src/ui-elements/particles/p-banner/p-banner.js":
+/*!********************************************************!*\
+  !*** ./src/ui-elements/particles/p-banner/p-banner.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! ../../atoms/a-button/a-button */ \"./src/ui-elements/atoms/a-button/a-button.js\");\n\n//# sourceURL=webpack:///./src/ui-elements/particles/p-banner/p-banner.js?");
 
 /***/ })
 
