@@ -7,4 +7,5 @@
 
 ## INSTALLATION:
 
-- run: yarn install
+- To install dependencies, run:  `$ yarn`
+- To run dev: `$ yarn dev`
