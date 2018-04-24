@@ -1,7 +1,14 @@
 const path = require('path');
+const commonPaths = require("./webpack-utils/common-paths");
+
+/**
+ * Webpack Plugins
+ */
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-// Post CSS Plugins:
+/**
+ * PostCSS Plugins
+ */
 const postcssImport = require('postcss-import');
 const postcssReporter = require('postcss-reporter');
 const postcssCssnext = require('postcss-cssnext');
@@ -16,7 +23,7 @@ module.exports = {
         main: './src/index.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: commonPaths.outputPath,
         filename: 'main.js'
     },
     module: {
@@ -47,10 +54,10 @@ module.exports = {
                                 cssMqpacker({
                                     sort: true
                                 }),
-                                cssnano({
-                                    autoprefixer: false,
-                                    safe: true
-                                })
+                                // cssnano({
+                                //     autoprefixer: false,
+                                //     safe: true
+                                // })
                             ]
                         }
                     }
