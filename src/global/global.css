@@ -1,0 +1,19 @@
+:root {
+    --color-blue: blue;
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
+body {
+    background-color: lightgrey;
+    max-width: 970px;
+    margin:  0 auto;
+}
+
+
+img {
+    height: auto;
+    max-width: 100%;
+}

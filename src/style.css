@@ -1,22 +1,4 @@
 @import "sanitize.css";
+@import "./global/global.css";
 @import "./ui-elements/particles/p-banner/p-banner.css";
-:root {
-    --color-blue: blue;
-}
-
-.color-blue {
-    color: var(--color-blue);
-}
-
-body {
-    background-color: lightgrey;
-    max-width: 970px;
-    margin:  0 auto;
-}
-
-
-img {
-    height: auto;
-    max-width: 100%;
-}
 
