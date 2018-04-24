@@ -1,6 +1,15 @@
+@import "sanitize.css";
+
+:root {
+    --color-blue: blue;
+}
+
+.color-blue {
+    color: var(--color-blue);
+}
+
 body {
-    display: flex;
     background-color: lightgrey;
-    text-transform: uppercase;
-    transition: transform 1s;
+    max-width: 970px;
+    margin:  0 auto;
 }
