@@ -66,31 +66,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/main.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/main.js":
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./style.pcss */ \"./src/style.pcss\");\n\n__webpack_require__(/*! ./ui-elements/particles/p-banner/p-banner */ \"./src/ui-elements/particles/p-banner/p-banner.js\");\n\nvar $main = document.querySelector('main');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\n__webpack_require__(/*! ./main.pcss */ \"./src/main.pcss\");\n\n__webpack_require__(/*! ./ui-elements/particles/p-banner/p-banner */ \"./src/ui-elements/particles/p-banner/p-banner.js\");\n\nvar $main = document.querySelector('main');\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 
-/***/ "./src/style.pcss":
-/*!************************!*\
-  !*** ./src/style.pcss ***!
-  \************************/
+/***/ "./src/main.pcss":
+/*!***********************!*\
+  !*** ./src/main.pcss ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/style.pcss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/main.pcss?");
 
 /***/ }),
 

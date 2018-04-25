@@ -1,5 +1,9 @@
 const path = require('path');
+const glob = require('glob');
+const webpackMerge = require('webpack-merge');
+
 const commonPaths = require("./webpack-utils/common-paths");
+const entryConfig = require("./webpack-utils/common-split-entries").entryConfig || {};
 
 /**
  * Webpack Plugins
@@ -18,13 +22,21 @@ const postcssResponsiveType = require('postcss-responsive-type');
 const cssMqpacker = require('css-mqpacker');
 const cssnano = require('cssnano');
 
+/**
+ * Base Webpack Configuration
+ */
+
+const baseConfig = {
+    main: './src/main.js'
+}
+
+const mergedConfig = webpackMerge(baseConfig, entryConfig);
+
 module.exports = {
-    entry: {
-        main: './src/index.js'
-    },
+    entry: mergedConfig,
     output: {
-        path: commonPaths.outputPath,
-        filename: 'main.js'
+        path: `${commonPaths.outputPath}`,
+        filename: 'js/[name].js'
     },
     module: {
         rules: [
@@ -67,7 +79,13 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style.css',
+            filename: 'css/[name].css'
         })
-    ]
+    ],
+    optimization: {
+        splitChunks: {
+            // Config goes here
+            chunks: 'all'
+        }
+    }
 };

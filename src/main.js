@@ -1,4 +1,4 @@
-import './style.pcss';
+import './main.pcss';
 
 import './ui-elements/particles/p-banner/p-banner';
 
