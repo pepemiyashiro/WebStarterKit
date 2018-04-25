@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./main.pcss */ \"./src/main.pcss\");\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("\n\n__webpack_require__(/*! ./main.pcss */ \"./src/main.pcss\");\n\nconsole.log(\"I'm Main\");\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 

@@ -1,6 +1,7 @@
 const path = require('path');
 const glob = require('glob');
 const webpackMerge = require('webpack-merge');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const commonPaths = require("./webpack-utils/common-paths");
 const entryConfig = require("./webpack-utils/common-split-entries").entryConfig || {};
@@ -30,7 +31,7 @@ const baseConfig = {
     main: './src/main.js'
 }
 
-const mergedConfig = webpackMerge(baseConfig, entryConfig);
+const mergedConfig = webpackMerge(baseConfig, entryConfig); //?
 
 module.exports = {
     entry: mergedConfig,
@@ -80,7 +81,15 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
-        })
+        }),
+        new CleanWebpackPlugin(
+            [ 'dist', 'assets' ],
+            {
+                root: path.resolve(__dirname, "../"),
+                exclude: ['index.html'],
+                verbose: false
+            }
+        )
     ],
     optimization: {
         splitChunks: {
