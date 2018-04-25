@@ -79,18 +79,18 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n__webpack_require__(/*! ./ui-elements/particles/p-banner/p-banner */ \"./src/ui-elements/particles/p-banner/p-banner.js\");\n\nvar $main = document.querySelector('main');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\n__webpack_require__(/*! ./style.pcss */ \"./src/style.pcss\");\n\n__webpack_require__(/*! ./ui-elements/particles/p-banner/p-banner */ \"./src/ui-elements/particles/p-banner/p-banner.js\");\n\nvar $main = document.querySelector('main');\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/style.css":
-/*!***********************!*\
-  !*** ./src/style.css ***!
-  \***********************/
+/***/ "./src/style.pcss":
+/*!************************!*\
+  !*** ./src/style.pcss ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/style.css?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/style.pcss?");
 
 /***/ }),
 
