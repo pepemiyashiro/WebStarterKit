@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./main.pcss */ \"./src/main.pcss\");\n\n__webpack_require__(/*! ./ui-elements/particles/p-banner/p-banner */ \"./src/ui-elements/particles/p-banner/p-banner.js\");\n\nvar $main = document.querySelector('main');\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("\n\n__webpack_require__(/*! ./main.pcss */ \"./src/main.pcss\");\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 
@@ -91,30 +91,6 @@ eval("\n\n__webpack_require__(/*! ./main.pcss */ \"./src/main.pcss\");\n\n__webp
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/main.pcss?");
-
-/***/ }),
-
-/***/ "./src/ui-elements/atoms/a-button/a-button.js":
-/*!****************************************************!*\
-  !*** ./src/ui-elements/atoms/a-button/a-button.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nconsole.log(\"Button have been loaded\");\n\n//# sourceURL=webpack:///./src/ui-elements/atoms/a-button/a-button.js?");
-
-/***/ }),
-
-/***/ "./src/ui-elements/particles/p-banner/p-banner.js":
-/*!********************************************************!*\
-  !*** ./src/ui-elements/particles/p-banner/p-banner.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! ../../atoms/a-button/a-button */ \"./src/ui-elements/atoms/a-button/a-button.js\");\n\n//# sourceURL=webpack:///./src/ui-elements/particles/p-banner/p-banner.js?");
 
 /***/ })
 

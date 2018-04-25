@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./banner.pcss */ \"./src/cms-components/split-entries/banner/banner.pcss\");\n\nconsole.log(\"I'am the banner\");\n\n//# sourceURL=webpack:///./src/cms-components/split-entries/banner/banner.js?");
+eval("\n\n__webpack_require__(/*! ./banner.pcss */ \"./src/cms-components/split-entries/banner/banner.pcss\");\n\n//# sourceURL=webpack:///./src/cms-components/split-entries/banner/banner.js?");
 
 /***/ }),
 

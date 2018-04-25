@@ -35,7 +35,7 @@ const mergedConfig = webpackMerge(baseConfig, entryConfig);
 module.exports = {
     entry: mergedConfig,
     output: {
-        path: `${commonPaths.outputPath}`,
+        path: commonPaths.outputPath,
         filename: 'js/[name].js'
     },
     module: {
@@ -84,7 +84,6 @@ module.exports = {
     ],
     optimization: {
         splitChunks: {
-            // Config goes here
             chunks: 'all'
         }
     }
