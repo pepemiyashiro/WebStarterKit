@@ -1,15 +1,14 @@
 const path = require('path');
 const glob = require('glob');
+
+
 const webpackMerge = require('webpack-merge');
+
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-
-const commonPaths = require("./webpack-utils/common-paths");
-const entryConfig = require("./webpack-utils/common-split-entries").entryConfig || {};
-
-/**
- * Webpack Plugins
- */
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const commonPaths = require("../webpack-utils/common-paths");
+const entryConfig = require("../webpack-utils/common-split-entries").entryConfig || {};
 
 /**
  * PostCSS Plugins
@@ -23,9 +22,6 @@ const postcssResponsiveType = require('postcss-responsive-type');
 const cssMqpacker = require('css-mqpacker');
 const cssnano = require('cssnano');
 
-/**
- * Base Webpack Configuration
- */
 
 const baseConfig = {
     main: './src/main.js'
@@ -96,4 +92,4 @@ module.exports = {
             chunks: 'all'
         }
     }
-};
+}

@@ -7,10 +7,10 @@
     "prod": "yarn watch --mode production",
     "dev": "yarn watch --mode development",
     "dev:debug": "yarn watch:debug --mode development",
-    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js --config 'webpack'",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js --config 'webpack/webpack.js'",
     "watch": "yarn build --watch",
     "watch:debug": "yarn debug --watch",
-    "build": "node ./node_modules/webpack/bin/webpack.js --config 'webpack'"
+    "build": "webpack --config 'webpack/webpack.js'"
   },
   "author": "Pepe Miyashiro",
   "license": "ISC",
@@ -32,6 +32,7 @@
     "postcss-responsive-type": "^1.0.0",
     "sanitize.css": "^5.0.0",
     "webpack": "^4.6.0",
+    "webpack-bundle-analyzer": "^2.11.1",
     "webpack-cli": "^2.0.14",
     "webpack-merge": "^4.1.2"
   }
