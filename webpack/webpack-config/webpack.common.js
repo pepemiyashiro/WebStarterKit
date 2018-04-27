@@ -8,19 +8,6 @@ const webpackMerge = require('webpack-merge');
 const commonPaths = require("../webpack-utils/common-paths");
 const entryConfig = require("../webpack-utils/common-split-entries").entryConfig || {};
 
-/**
- * PostCSS Plugins
- */
-const postcssImport = require('postcss-import');
-const postcssReporter = require('postcss-reporter');
-const postcssCssnext = require('postcss-cssnext');
-const postcssNested = require('postcss-nested');
-const postcssRemoveRoot = require('postcss-remove-root');
-const postcssResponsiveType = require('postcss-responsive-type');
-const cssMqpacker = require('css-mqpacker');
-const cssnano = require('cssnano');
-
-
 const baseConfig = {
     main: './src/main.js',
     'web-components.polyfills': './src/libs/web-components.polyfills.js'
@@ -49,25 +36,7 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     'css-loader',
                     {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: 'inline',
-                            plugins: () => [
-                                postcssImport,
-                                postcssReporter(),
-                                postcssCssnext(),
-                                postcssResponsiveType,
-                                postcssNested,
-                                postcssRemoveRoot,
-                                cssMqpacker({
-                                    sort: true
-                                }),
-                                // cssnano({
-                                //     autoprefixer: false,
-                                //     safe: true
-                                // })
-                            ]
-                        }
+                        loader: 'postcss-loader'
                     }
                 ]
             }
