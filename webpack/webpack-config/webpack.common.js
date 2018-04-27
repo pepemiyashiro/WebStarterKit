@@ -22,10 +22,11 @@ const cssnano = require('cssnano');
 
 
 const baseConfig = {
-    main: './src/main.js'
+    main: './src/main.js',
+    'web-components.polyfills': './src/libs/web-components.polyfills.js'
 }
 
-const mergedConfig = webpackMerge(baseConfig, entryConfig); //?
+const mergedConfig = webpackMerge(baseConfig, entryConfig);
 
 module.exports = {
     entry: mergedConfig,

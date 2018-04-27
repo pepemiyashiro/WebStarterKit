@@ -6,6 +6,10 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
+"@webcomponents/webcomponentsjs@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.2.0.tgz#c9e129340c3e4637f5fa6505e968e85face7bd5b"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -5603,6 +5607,10 @@ watchpack@^1.5.0:
     chokidar "^2.0.2"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
+
+webcomponents-lite@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/webcomponents-lite/-/webcomponents-lite-0.6.0.tgz#d5e10ccba591711d45c15c64976bfc4f8f6157cb"
 
 webpack-addons@^1.1.5:
   version "1.1.5"
