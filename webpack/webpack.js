@@ -28,5 +28,5 @@ module.exports = (...env) => {
 
     const mergedConfig = mainWebpackConfig;
 
-    return mergedConfig;w
+    return mergedConfig;
 }
