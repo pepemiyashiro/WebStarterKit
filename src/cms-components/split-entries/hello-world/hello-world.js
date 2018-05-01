@@ -13,7 +13,7 @@ class HelloWorld extends HTMLElement {
 
     initialize() {
         console.log(this);
-        const html = template('This is a custom element banner that inherits Styles from the main class');
+        const html = template('This is a custom element banner that inherits Styles from the main class!!!');
         this.innerHTML = html;
     }
 }
