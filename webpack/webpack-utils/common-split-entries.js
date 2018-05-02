@@ -26,7 +26,6 @@ function getFilesPath(targetFolder) {
 
 function setEntryConfig(targetFolder) {
     const entriesObj = {};
-    // console.log("setentry :", getFilesPath(targetFolder));
     getFilesPath(targetFolder)
             .map(file => entriesObj[`${path.basename(file, `.${fileExtention}`)}`] = file )
     return entriesObj;
