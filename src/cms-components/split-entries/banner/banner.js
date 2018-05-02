@@ -1,5 +1,5 @@
 // Styles
-// import './banner.pcss';
+import './banner.pcss';
 
 console.log("hello");
 
@@ -11,3 +11,4 @@ console.log("hello");
         }
     }
 })
+
