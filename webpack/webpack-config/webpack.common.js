@@ -1,8 +1,5 @@
 const path = require('path');
 const glob = require('glob');
-
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpackMerge = require('webpack-merge');
 
 
@@ -22,34 +19,6 @@ module.exports = {
         path: commonPaths.outputPath,
         filename: 'js/[name].js'
     },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                }
-            },
-            {
-                test: /\.(css|pcss)$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    {
-                        loader: 'postcss-loader'
-                    }
-                ]
-            }
-        ]
-    },
-    plugins: [
-        new BrowserSyncPlugin({
-            host: 'localhost',
-            port: 3000,
-            server: { baseDir: ['dist'] }
-        })
-    ],
     optimization: {
         splitChunks: {
             chunks: 'all'
