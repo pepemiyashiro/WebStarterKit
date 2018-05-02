@@ -1,14 +1,18 @@
 // Styles
-import './banner.pcss';
-
-console.log("hello");
+// import './banner.pcss';
 
 ({
     "plugins": ["jsdom2-quokka-plugin"],
-    "jsdom": {
+    "jsdomConfig": {
         "config": {
-            "file": "file:///Users/pepemiyashiro/PoC/Webpack-4/dist/index.html"
+            "url": "http://localhost:3000"
+        },
+        "options" : {
+            "includeNodeLocations": true
         }
     }
 })
 
+const $banner = document.querySelector('.p-banner'); //?
+
+$banner.parentNode.nodeName //?
