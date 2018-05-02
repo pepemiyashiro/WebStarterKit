@@ -2,7 +2,7 @@
  * Custom Element Example
  */
 
-import template from './hello-world.template';
+import template from './template/hello-world.template';
 
 
 class HelloWorld extends HTMLElement {

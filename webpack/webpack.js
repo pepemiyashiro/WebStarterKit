@@ -14,7 +14,7 @@ const plugins = [
 
 // Modules
 const modules = [
-    // require('./webpack-partials/webpack-loaders/webpack.loader.babel'),
+    require('./webpack-partials/webpack-loaders/webpack.loader.babel'),
     require('./webpack-partials/webpack-loaders/webpack.loader.postcss')
 ]
 

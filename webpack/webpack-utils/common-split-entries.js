@@ -3,7 +3,9 @@ const path = require('path');
 const glob = require('glob');
 
 const splitEntriesFolder = path.resolve(__dirname, "../../", "src", "cms-components", "split-entries");
-const fileExtention = '.js';
+const fileExtention = 'js';
+const invalidNameRegex = //
+
 /**
  * detects if directory exist
  * @param {String} targetFolder
@@ -16,21 +18,17 @@ function isDirectory(targetFolder) {
  * list all split entries folder names
  * @param {String} jsFilesPath
  */
-function getEntriesFolderNames(jsFilesPath) {
-    return readdirSync(jsFilesPath)
-            .map(name => path.join(jsFilesPath, name))
-            .filter(isDirectory)
-            .map( folderName => path.basename(folderName) );
-}
 
 function getFilesPath(targetFolder) {
-    return glob.sync(`${targetFolder}/**/*${fileExtention}`)
+    console.log( glob.sync(`${targetFolder}/*`) );
+    return glob.sync(`${targetFolder}/*/*.${fileExtention}`)
 }
 
 function setEntryConfig(targetFolder) {
     const entriesObj = {};
+    // console.log("setentry :", getFilesPath(targetFolder));
     getFilesPath(targetFolder)
-            .map(file => entriesObj[`${path.basename(file, fileExtention)}`] = file )
+            .map(file => entriesObj[`${path.basename(file, `.${fileExtention}`)}`] = file )
     return entriesObj;
 }
 
