@@ -2,7 +2,7 @@ const { lstatSync, readdirSync } = require('fs')
 const path = require('path');
 const glob = require('glob');
 
-const splitEntriesFolder = path.resolve(__dirname, "../../", "src", "cms-components", "split-entries");
+const splitEntriesFolder = path.resolve(__dirname, "../../", "src", "cms-components", "splited");
 const fileExtention = 'js';
 const invalidNameRegex = //
 
