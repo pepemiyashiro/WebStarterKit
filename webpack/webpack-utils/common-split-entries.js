@@ -20,7 +20,6 @@ function isDirectory(targetFolder) {
  */
 
 function getFilesPath(targetFolder) {
-    console.log( glob.sync(`${targetFolder}/*`) );
     return glob.sync(`${targetFolder}/*/*.${fileExtention}`)
 }
 
