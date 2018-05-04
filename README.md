@@ -2,13 +2,12 @@
 
 ## Requirements:
 
-- node 4+
+- node v8.11.1
 - yarn recommend for clearer npm script composition
 
 ## Installation:
 
 - To install dependencies, run:  `$ yarn`
-- To run dev: `$ yarn dev`
 
 ## PostCSS
 We are using:

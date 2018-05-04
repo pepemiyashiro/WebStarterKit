@@ -17,7 +17,7 @@ module.exports = {
     entry: mergedConfig,
     output: {
         path: commonPaths.outputPath,
-        filename: 'js/[name].js'
+        filename: 'js/[name].bundle.js'
     },
     optimization: {
         splitChunks: {
