@@ -6,21 +6,10 @@ const getObjectPropertyValue = require('./webpack-utils/get-cmd-target-args');
 const commonConfig = require('./webpack-config/webpack.common');
 
 // Plugins
-const plugins = function(mode) {
-    return [
-        require('./webpack-partials/webpack-plugins/webpack.miniCssExtractPlugin')(mode),
-        require('./webpack-partials/webpack-plugins/webpack.cleanWebpackPlugin')(mode),
-        require('./webpack-partials/webpack-plugins/webpack.browserSyncPlugin')(mode)
-    ]
-}
+const plugins = require('../webpack.addons').plugins;
 
 // Modules
-const modules = function(mode) {
-    return [
-        require('./webpack-partials/webpack-loaders/webpack.loader.babel')(mode),
-        require('./webpack-partials/webpack-loaders/webpack.loader.postcss')(mode)
-    ]
-}
+const modules = require('../webpack.addons').modules;
 
 /**
  * Base Webpack Configuration
