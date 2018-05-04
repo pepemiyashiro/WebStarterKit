@@ -8,16 +8,16 @@ const commonConfig = require('./webpack-config/webpack.common');
 // Plugins
 const plugins = function(mode) {
     return [
-        require('./webpack-partials/webpack-plugins/webpack.miniCssExtractPlugin'),
-        require('./webpack-partials/webpack-plugins/webpack.cleanWebpackPlugin'),
-        require('./webpack-partials/webpack-plugins/webpack.browserSyncPlugin')
+        require('./webpack-partials/webpack-plugins/webpack.miniCssExtractPlugin')(mode),
+        require('./webpack-partials/webpack-plugins/webpack.cleanWebpackPlugin')(mode),
+        require('./webpack-partials/webpack-plugins/webpack.browserSyncPlugin')(mode)
     ]
 }
 
 // Modules
 const modules = function(mode) {
     return [
-        require('./webpack-partials/webpack-loaders/webpack.loader.babel'),
+        require('./webpack-partials/webpack-loaders/webpack.loader.babel')(mode),
         require('./webpack-partials/webpack-loaders/webpack.loader.postcss')(mode)
     ]
 }
