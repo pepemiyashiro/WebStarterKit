@@ -6,33 +6,39 @@ const getObjectPropertyValue = require('./webpack-utils/get-cmd-target-args');
 const commonConfig = require('./webpack-config/webpack.common');
 
 // Plugins
-const plugins = [
-    require('./webpack-partials/webpack-plugins/webpack.miniCssExtractPlugin'),
-    require('./webpack-partials/webpack-plugins/webpack.cleanWebpackPlugin'),
-    require('./webpack-partials/webpack-plugins/webpack.browserSyncPlugin')
-]
+const plugins = function(mode) {
+    return [
+        require('./webpack-partials/webpack-plugins/webpack.miniCssExtractPlugin'),
+        require('./webpack-partials/webpack-plugins/webpack.cleanWebpackPlugin'),
+        require('./webpack-partials/webpack-plugins/webpack.browserSyncPlugin')
+    ]
+}
 
 // Modules
-const modules = [
-    require('./webpack-partials/webpack-loaders/webpack.loader.babel'),
-    require('./webpack-partials/webpack-loaders/webpack.loader.postcss')
-]
+const modules = function(mode) {
+    return [
+        require('./webpack-partials/webpack-loaders/webpack.loader.babel'),
+        require('./webpack-partials/webpack-loaders/webpack.loader.postcss')(mode)
+    ]
+}
 
 /**
  * Base Webpack Configuration
  */
- const mainWebpackConfig = webpackMerge(
-    // Base Configuration
-    commonConfig,
-    // Loading Modules [Loader]
-    ...modules,
-    // Loading Plugins
-    ...plugins
- )
+ const mainWebpackConfig = function(mode) {
+    return webpackMerge(
+        // Base Configuration
+        commonConfig,
+        // Loading webpack config depending on mode
+        require(`./webpack-config/webpack.${mode}.js`),
+        // Loading Modules [Loaders]
+        ...modules(mode),
+        // Loading Plugins
+        ...plugins(mode)
+     )
+ }
 
 
 module.exports = (...env) => {
-    // console.log(getObjectPropertyValue(env[1], 'mode'));
-    const mergedConfig = mainWebpackConfig;
-    return mergedConfig;
+    return mainWebpackConfig(getObjectPropertyValue(env[1], 'mode'));
 }

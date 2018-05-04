@@ -1,5 +1,5 @@
 // Styles
-// import './banner.pcss';
+import './banner.pcss';
 
 ({
     "plugins": ["jsdom2-quokka-plugin"],

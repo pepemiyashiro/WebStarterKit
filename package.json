@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prod": "yarn build --mode production",
-    "dev": "yarn watch --mode development",
+    "prod:server": "yarn watch --mode production",
+    "dev": "yarn build --mode development",
+    "dev:server": "yarn watch --mode development",
     "dev:debug": "yarn watch:debug --mode development",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js --config 'webpack/webpack.js'",
     "watch": "yarn build --watch",
