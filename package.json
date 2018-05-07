@@ -4,6 +4,7 @@
   "description": "Build with Webpack4",
   "main": "index.js",
   "scripts": {
+    "start": "node cli",
     "prod": "yarn build --mode production",
     "prod:server": "yarn watch --mode production",
     "dev": "yarn build --mode development",
