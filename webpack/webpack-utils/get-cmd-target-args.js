@@ -1,5 +1,5 @@
 /**
- * Get the target argument from command line
+ * Get the target property from an Object
  */
 
 const proxyHandler = {
@@ -12,7 +12,5 @@ const getObjectPropertyValue = (argsObject, targetKey) => {
     const getKey = new Proxy(argsObject, proxyHandler);
     return  getKey[targetKey];
 }
-
-
 
  module.exports = getObjectPropertyValue;

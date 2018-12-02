@@ -1,28 +1,28 @@
 const path = require('path');
 const glob = require('glob');
 const webpackMerge = require('webpack-merge');
-
 const getObjectPropertyValue = require('./webpack-utils/get-cmd-target-args');
-const commonConfig = require('./webpack-config/webpack.common');
-
-// Plugins
+const webpackCommonConfig = require('./webpack-config/webpack.common');
 const plugins = require('../webpack.addons').plugins;
-
-// Modules
 const modules = require('../webpack.addons').modules;
 
 /**
  * Base Webpack Configuration
  */
- const mainWebpackConfig = function(mode) {
+
+/**
+ * This method compose the configurations depending on the mode
+ * @param {String} mode
+ */
+const mainWebpackConfig = function(mode) {
     return webpackMerge(
-        // Base Configuration
-        commonConfig,
-        // Loading webpack config depending on mode
+        // Common webpack Configuration
+        webpackCommonConfig,
+        // Loads webpack config by mode
         require(`./webpack-config/webpack.${mode}.js`),
-        // Loading Modules [Loaders]
+        // Loads the loaders to the webpack module
         ...modules(mode),
-        // Loading Plugins
+        // Loads the plugins
         ...plugins(mode)
      )
  }
